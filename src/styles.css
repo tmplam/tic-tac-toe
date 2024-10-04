@@ -51,6 +51,11 @@ li {
   margin-bottom: 8px;
 }
 
+.title {
+  text-align: center;
+  margin-bottom: 58px;
+}
+
 .square {
   background: #fff;
   border: 1px solid #999;
