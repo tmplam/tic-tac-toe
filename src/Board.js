@@ -48,16 +48,16 @@ export default function Board({ xIsNext, step: { squares }, onPlay, boardSize = 
   const draw = fullBoard(squares);
   let status;
   if (winner) {
-    status = 'Winner: ' + winner.player;
+    status = `Winner: ${winner.player} ^^!`;
   } else if (draw) {
-    status = 'Draw';
+    status = 'Draw game ^^!';
   } else {
     status = 'Next player: ' + (xIsNext ? 'X' : 'O');
   }
 
   return (
     <>
-      <div className="status">{status}</div>
+      <div className={`status ${winner || draw ? 'finish' : ''}`}>{status}</div>
       {Array(boardSize)
         .fill(null)
         .map((_, rowIndex) => {
@@ -67,7 +67,7 @@ export default function Board({ xIsNext, step: { squares }, onPlay, boardSize = 
                 .fill(null)
                 .map((_, colIndex) => {
                   const index = rowIndex * boardSize + colIndex;
-                  const squareCoords = `(${rowIndex + 1}, ${colIndex + 1})`;
+                  const squareCoords = `(${rowIndex}, ${colIndex})`;
                   return (
                     <Square
                       isHighlight={

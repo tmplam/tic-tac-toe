@@ -31,7 +31,7 @@ export default function Game() {
     let element = null;
     if (currentMove == move) {
       element = (
-        <span>
+        <span className="current-text">
           {move === 0 ? 'You are at game start' : `You are at move #${move} - ${step.coords}`}
         </span>
       );

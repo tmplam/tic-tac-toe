@@ -51,16 +51,6 @@ li {
   margin-bottom: 8px;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: sans-serif;
-  margin: 20px;
-  padding: 0;
-}
-
 .square {
   background: #fff;
   border: 1px solid #999;
@@ -90,12 +80,21 @@ body {
   margin-bottom: 10px;
 }
 
+.status.finish {
+  color: green;
+}
+
 .game {
   display: flex;
   justify-content: center;
 }
 
 .game-info {
-  margin-left: 20px;
-  text-align: end;
+  margin-left: 48px;
+  text-align: center;
+}
+
+.current-text {
+  color: blue;
+  font-size: 13.33px;
 }
